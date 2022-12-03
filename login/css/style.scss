@@ -1,0 +1,99 @@
+:root {
+  --clr-neon: #14f7ff;
+  --clr-bg: #001414;
+  --font-size: 3rem;
+}
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#041f52, #03089e);
+}
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(7, 6, 6, 0.35);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  .user-box {
+    position: relative;
+    input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      outline: none;
+      background: transparent;
+    }
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+  }
+}
+.btn {
+  width: 100px;
+  height: 50px;
+  border-radius: 15px;
+  float: right;
+  border: none;
+  text-shadow: 0 0 0.2em #fff7, 0 0 0.3em var(--clr-neon);
+  box-shadow: inset 0 0 0.9em var(--clr-neon), 0 0 2em var(--clr-neon);
+  cursor: pointer;
+  background-color: #03e9f4;
+  font-size: 17px;
+}
+.btn:hover,
+.btn:focus {
+  color: #ddd;
+  font-weight: bold;
+}
+
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 25px #fff,
+    0 0 42px #f09 0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+}
+h1 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 3.5em;
+  line-height: 1;
+  animation: glow 0.5s ease-in-out infinite alternate-reverse;
+}
+@keyframes glow {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
+      0 0 80px #f09, 0 0 90px #f09, 0 0 100px #f09, 0 0 150px #f09;
+  }
+  0% {
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
+      0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+  }
+}
